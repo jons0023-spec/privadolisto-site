@@ -1,0 +1,31 @@
+name: Soporte de PrivadoListo
+description: Comunica un problema usando solo datos ficticios.
+title: "[Soporte] "
+body:
+  - type: markdown
+    attributes:
+      value: "Esta incidencia es pública. No incluyas datos personales, prompts originales, documentos, contraseñas o capturas de conversaciones reales."
+  - type: input
+    id: version
+    attributes:
+      label: Versiones de PrivadoListo y Chrome
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Plataforma
+      options:
+        - ChatGPT
+        - Claude
+        - Gemini
+        - Web o popup
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Pasos y resultado
+      description: Utiliza exclusivamente ejemplos ficticios.
+    validations:
+      required: true
